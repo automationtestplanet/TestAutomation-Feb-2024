@@ -15,21 +15,26 @@ public class OpenMrsTest {
 
 		driver.manage().window().maximize();
 
-		driver.get("https://demo.openmrs.org/openmrs/login.htm");
+//		driver.get("https://demo.openmrs.org/openmrs/login.htm");
 //		
 //		drvier.navigate().to("https://demo.openmrs.org/openmrs/login.htm");
-
-		driver.findElement(By.id("username")).sendKeys("Admin");
-
-		driver.findElement(By.id("password")).sendKeys("Admin123");
-
-		driver.findElement(By.id("Registration Desk")).click();
-
-		driver.findElement(By.id("loginButton")).click();
-
+//
+//		driver.findElement(By.id("username")).sendKeys("Admin");
+//
+//		driver.findElement(By.id("password")).sendKeys("Admin123");
+//
+//		driver.findElement(By.id("Registration Desk")).click();
+//
+//		driver.findElement(By.id("loginButton")).click();
+//
 //		drvier.close();
 
 //		drvier.quit();
+		
+		
+		
+		
+		
 
 	}
 
