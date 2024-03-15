@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -29,8 +30,8 @@ public class OpenMrsTest {
 				+ "\\src\\main\\resources\\drivers\\chrome\\chrome122\\chromedriver.exe");
 
 		driver = new ChromeDriver();
-
 		driver.manage().window().maximize();
+//		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		BaseClass baseCls = new BaseClass(driver);
 		LoginPage loginPage = new LoginPage(driver);
@@ -39,25 +40,32 @@ public class OpenMrsTest {
 		PatientDetailsPage patientDetailsPage = new PatientDetailsPage(driver);
 
 		baseCls.navigateToApp("https://demo.openmrs.org/openmrs/login.htm");
+		
 		loginPage.login("Admin", "Admin123", "Registration Desk");
+		
 		homePage.verifyLogin();
-
 		homePage.verifyModuleTile("Register a patient");
 		homePage.clickModuleTile("Register a patient");
+		
 		registrationPage.verifyModulePage("Register a patient");
-
 		registrationPage.enterName("Ganesh, G");
 		registrationPage.clikNextButton();
 		registrationPage.selectGender("Male");
 		registrationPage.clikNextButton();
 		registrationPage.setDateOfBorth("10, January, 1992");
 		registrationPage.clikNextButton();
-		registrationPage.verifyRegistrationDetails("Ganesh, G", "Male", "10, January, 1992");
+		registrationPage.enterAddress("Flat 102, S R Nagar", "Hyderabad", "Telangana", "India","500038");
+		registrationPage.clikNextButton();
+		registrationPage.setPhoneNumber("9876543210");
+		registrationPage.clikNextButton();
+		registrationPage.clikNextButton();		
+		registrationPage.verifyRegistrationDetails("Ganesh, G", "Male", "10, January, 1992","9876543210");		
 		registrationPage.clikConfirmButton();
-
+		
 		patientDetailsPage.verifyRegesteredDetails("Ganesh, G");
-		patientDetailsPage.storePatientId();
+		patientDetailsPage.storePatientIdToPropertiesFile();
 		System.out.println(patientDetailsPage.getPatientIdFromPropertis());
-		driver.close();
+		
+//		driver.close();
 	}
 }

@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PatientDetailsPage extends BaseClass {
 
@@ -44,6 +46,10 @@ public class PatientDetailsPage extends BaseClass {
 	}
 
 	public void verifyRegesteredDetails(String name) {
+		
+		WebDriverWait wait = new WebDriverWait(driver, 20);		
+		wait.until(ExpectedConditions.visibilityOf(getGivenName()));		
+		
 		String givenName = getGivenName().getText().trim();
 		String familyName = getFamilyName().getText().trim();
 		if (name.contains(givenName) && name.contains(familyName))
@@ -52,7 +58,7 @@ public class PatientDetailsPage extends BaseClass {
 			System.out.println("Registration Failed");
 	}
 
-	public void storePatientId() throws Exception {
+	public void storePatientIdToPropertiesFile() throws Exception {
 		String patientId = getPatientId().getText().trim();
 		System.out.println("Pateint Id: " + patientId);
 		appProperties.load(new FileInputStream(new File(System.getProperty("user.dir") + filePath)));
