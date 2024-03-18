@@ -1,5 +1,9 @@
 package org.openmrs;
 
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -12,7 +16,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import page.objects.BaseClass;
 import page.objects.FindPatientPage;
@@ -40,11 +47,14 @@ public class OpenMrsTest {
 		RegistrationPage registrationPage = new RegistrationPage(driver);
 		PatientDetailsPage patientDetailsPage = new PatientDetailsPage(driver);
 		FindPatientPage findPatientPage = new FindPatientPage(driver);
+		Actions actions = new Actions(driver);
 
 		baseCls.navigateToApp("https://demo.openmrs.org/openmrs/login.htm");
 
 		loginPage.login("Admin", "Admin123", "Registration Desk");
 
+		System.out.println("---------------------------Register Patient--------------------------------");
+		
 		homePage.verifyLogin();
 		homePage.verifyModuleTile("Register a patient");
 		homePage.clickModuleTile("Register a patient");
@@ -68,14 +78,37 @@ public class OpenMrsTest {
 		patientDetailsPage.storePatientIdToPropertiesFile();
 		System.out.println(patientDetailsPage.getPatientIdFromPropertis());
 
+		
+		System.out.println("---------------------------Find Patient--------------------------------");
+		
 		homePage.clickHomeIcon();
 		homePage.verifyModuleTile("Find Patient Record");
 		homePage.clickModuleTile("Find Patient Record");
 		findPatientPage.searchPatientRecord(patientDetailsPage.getPatientIdFromPropertis());
-		findPatientPage.verifyResultTableColumnValue("Identifier",patientDetailsPage.getPatientIdFromPropertis());
-		findPatientPage.getResultTableColumnElement("Identifier").click();
+		findPatientPage.verifyResultTableColumnValue("Identifier",patientDetailsPage.getPatientIdFromPropertis());		
+		Thread.sleep(5000);		
+		WebElement resultTableElement = findPatientPage.getResultTableColumnElement("Identifier");
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(resultTableElement));		
+		actions.moveToElement(resultTableElement).click(resultTableElement).build().perform();	
 		patientDetailsPage.verifyRegesteredDetails("Ganesh, G");
 		
+		System.out.println("---------------------------Active Visits --------------------------------");
+		
+		homePage.clickHomeIcon();
+		homePage.clickModuleTile("Find Patient Record");
+		findPatientPage.searchPatientRecord(patientDetailsPage.getPatientIdFromPropertis());	
+		Thread.sleep(5000);
+		findPatientPage.clickResultTableColumnElement("Identifier");
+		patientDetailsPage.startVisit();
+		patientDetailsPage.clickAttachmentsLink();
+		
+//		String filePath = "C:\\Users\\RAJU CHELLE\\Desktop\\UploadFile.pdf";
+		String filePath = "UploadFile.pdf";
+		patientDetailsPage.uploadFile(filePath, "TestUploadFile");
+		Thread.sleep(5000);
+		patientDetailsPage.verifyFileUpload();
+
 		
 
 //		driver.close();

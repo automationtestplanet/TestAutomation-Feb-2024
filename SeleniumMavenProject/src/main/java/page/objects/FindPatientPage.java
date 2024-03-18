@@ -63,5 +63,9 @@ public class FindPatientPage extends BaseClass {
 					+ " is not matching with expected value: " + expectedColumnValue);
 		}
 	}
+	
+	public void clickResultTableColumnElement(String columnName) {
+		getResultTableColumnElement(columnName).click();;
+	}
 
 }
