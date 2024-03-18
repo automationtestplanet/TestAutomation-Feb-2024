@@ -15,5 +15,4 @@ public class BaseClass {
 	public void navigateToApp(String url) {
 		driver.get(url);
 	}
-
 }

@@ -12,10 +12,18 @@ public class HomePage extends BaseClass {
 	}
 
 //	WebElement logoutButton = driver.findElement(By.partialLinkText("Logout"));
-	@FindBy(partialLinkText = "Logout") WebElement logoutButton;
+	@FindBy(partialLinkText = "Logout")
+	WebElement logoutButton;
+
+	@FindBy(css = ".icon-home.small")
+	WebElement homeIcon;
 
 	public WebElement getLogoutButton() {
 		return logoutButton;
+	}
+
+	public WebElement getHomeIcon() {
+		return homeIcon;
 	}
 
 	public WebElement getModuleTile(String moduleName) {
@@ -38,6 +46,10 @@ public class HomePage extends BaseClass {
 
 	public void clickModuleTile(String moduleName) {
 		getModuleTile(moduleName).click();
+	}
+
+	public void clickHomeIcon() {
+		getHomeIcon().click();
 	}
 
 }

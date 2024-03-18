@@ -46,10 +46,9 @@ public class PatientDetailsPage extends BaseClass {
 	}
 
 	public void verifyRegesteredDetails(String name) {
-		
-		WebDriverWait wait = new WebDriverWait(driver, 20);		
-		wait.until(ExpectedConditions.visibilityOf(getGivenName()));		
-		
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.visibilityOf(getGivenName()));
+
 		String givenName = getGivenName().getText().trim();
 		String familyName = getFamilyName().getText().trim();
 		if (name.contains(givenName) && name.contains(familyName))

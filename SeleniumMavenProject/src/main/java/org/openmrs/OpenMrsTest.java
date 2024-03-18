@@ -15,6 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import page.objects.BaseClass;
+import page.objects.FindPatientPage;
 import page.objects.HomePage;
 import page.objects.LoginPage;
 import page.objects.PatientDetailsPage;
@@ -31,22 +32,23 @@ public class OpenMrsTest {
 
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-//		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		BaseClass baseCls = new BaseClass(driver);
 		LoginPage loginPage = new LoginPage(driver);
 		HomePage homePage = new HomePage(driver);
 		RegistrationPage registrationPage = new RegistrationPage(driver);
 		PatientDetailsPage patientDetailsPage = new PatientDetailsPage(driver);
+		FindPatientPage findPatientPage = new FindPatientPage(driver);
 
 		baseCls.navigateToApp("https://demo.openmrs.org/openmrs/login.htm");
-		
+
 		loginPage.login("Admin", "Admin123", "Registration Desk");
-		
+
 		homePage.verifyLogin();
 		homePage.verifyModuleTile("Register a patient");
 		homePage.clickModuleTile("Register a patient");
-		
+
 		registrationPage.verifyModulePage("Register a patient");
 		registrationPage.enterName("Ganesh, G");
 		registrationPage.clikNextButton();
@@ -54,18 +56,28 @@ public class OpenMrsTest {
 		registrationPage.clikNextButton();
 		registrationPage.setDateOfBorth("10, January, 1992");
 		registrationPage.clikNextButton();
-		registrationPage.enterAddress("Flat 102, S R Nagar", "Hyderabad", "Telangana", "India","500038");
+		registrationPage.enterAddress("Flat 102, S R Nagar", "Hyderabad", "Telangana", "India", "500038");
 		registrationPage.clikNextButton();
 		registrationPage.setPhoneNumber("9876543210");
 		registrationPage.clikNextButton();
-		registrationPage.clikNextButton();		
-		registrationPage.verifyRegistrationDetails("Ganesh, G", "Male", "10, January, 1992","9876543210");		
+		registrationPage.clikNextButton();
+		registrationPage.verifyRegistrationDetails("Ganesh, G", "Male", "10, January, 1992", "9876543210");
 		registrationPage.clikConfirmButton();
-		
+
 		patientDetailsPage.verifyRegesteredDetails("Ganesh, G");
 		patientDetailsPage.storePatientIdToPropertiesFile();
 		System.out.println(patientDetailsPage.getPatientIdFromPropertis());
+
+		homePage.clickHomeIcon();
+		homePage.verifyModuleTile("Find Patient Record");
+		homePage.clickModuleTile("Find Patient Record");
+		findPatientPage.searchPatientRecord(patientDetailsPage.getPatientIdFromPropertis());
+		findPatientPage.verifyResultTableColumnValue("Identifier",patientDetailsPage.getPatientIdFromPropertis());
+		findPatientPage.getResultTableColumnElement("Identifier").click();
+		patientDetailsPage.verifyRegesteredDetails("Ganesh, G");
 		
+		
+
 //		driver.close();
 	}
 }
