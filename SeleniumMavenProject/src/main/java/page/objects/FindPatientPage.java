@@ -30,9 +30,15 @@ public class FindPatientPage extends BaseClass {
 	@FindBy(css = "table#patient-search-results-table>thead>tr>th>div")
 	List<WebElement> resultTableHeaders;
 
+	@FindBy(xpath = "//td[text()='No matching records found']")
+	WebElement noMatchingReordsElement;
+
 	public List<WebElement> getResultTableHeaders() {
 		return resultTableHeaders;
 	}
+	
+	@FindBy(id = "patient-search-results-table_info")
+	WebElement findPatientRecordsInfo;
 
 	public int getResultTableColumnIndex(String columnName) {
 		Map<String, Integer> headersMap = new LinkedHashMap<>();
@@ -53,6 +59,14 @@ public class FindPatientPage extends BaseClass {
 		return getResultTableColumnElement(columnName).getText().trim();
 	}
 
+	public WebElement getNoMatchingReordsElement() {
+		return noMatchingReordsElement;
+	}
+	
+	public WebElement getFindPatientRecordsInfo() {
+		return findPatientRecordsInfo;
+	}
+
 	public void verifyResultTableColumnValue(String columnName, String expectedColumnValue) {
 		String actualColumnValue = getResultTableColumnValue(columnName);
 		if (actualColumnValue.contains(expectedColumnValue)) {
@@ -63,9 +77,17 @@ public class FindPatientPage extends BaseClass {
 					+ " is not matching with expected value: " + expectedColumnValue);
 		}
 	}
-	
+
 	public void clickResultTableColumnElement(String columnName) {
-		getResultTableColumnElement(columnName).click();;
+		getResultTableColumnElement(columnName).click();
+	}
+
+	public void verifyPatientRecordNotFiltered() {
+		if (getNoMatchingReordsElement().isDisplayed()) {
+			System.out.println("Patient Record deleted successfully");
+		} else {
+			System.out.println("Patient Record is not deleted");
+		}
 	}
 
 }

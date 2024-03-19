@@ -51,5 +51,9 @@ public class HomePage extends BaseClass {
 	public void clickHomeIcon() {
 		getHomeIcon().click();
 	}
+	
+	public void clickLogout() {
+		getLogoutButton().click();
+	}
 
 }

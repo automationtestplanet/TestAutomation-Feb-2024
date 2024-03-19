@@ -56,6 +56,12 @@ public class PatientDetailsPage extends BaseClass {
 	
 	@FindBy(xpath = "//div[contains(@class,'att_thumbnail-frame')]")
 	WebElement uploadedFile;
+	
+	@FindBy(css = "#delete-patient-creation-dialog .confirm.right")
+	WebElement deletePatientCofirmButton;
+	
+	@FindBy(id = "delete-reason")
+	WebElement deleteReasoninput;
 
 	public WebElement getGivenName() {
 		return givenName;
@@ -91,6 +97,14 @@ public class PatientDetailsPage extends BaseClass {
 	
 	public WebElement getUplodedFile() {
 		return uploadedFile;
+	}
+	
+	public WebElement getDeleteReasoninput() {
+		return deleteReasoninput;
+	}
+	
+	public WebElement getDeletePatientCofirmButton() {
+		return deletePatientCofirmButton;
 	}
 
 	public void verifyRegesteredDetails(String name) {
@@ -177,5 +191,19 @@ public class PatientDetailsPage extends BaseClass {
 		}else {
 			System.out.println("File Upload is failed");
 		}
+	}
+	
+	public void setDeleteReason(String reason) {
+		getDeleteReasoninput().sendKeys(reason);
+	}
+	
+	public void clickDeletePatientCofirmButton() {
+		getDeletePatientCofirmButton().click();
+	}
+	
+	public void deletePatient(String reason) {
+		clickGeneralAction("Delete Patient");
+		setDeleteReason(reason);
+		clickDeletePatientCofirmButton();
 	}
 }
