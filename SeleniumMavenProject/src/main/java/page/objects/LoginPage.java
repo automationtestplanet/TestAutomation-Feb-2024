@@ -61,5 +61,9 @@ public class LoginPage extends BaseClass {
 		selectModule(moduleName);
 		clickLogin();
 	}
+	
+	public boolean verifyLoginPage() {
+		return driver.getTitle().trim().equalsIgnoreCase("Login");
+	}
 
 }

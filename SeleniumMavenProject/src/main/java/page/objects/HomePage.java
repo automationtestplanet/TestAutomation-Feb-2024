@@ -30,20 +30,23 @@ public class HomePage extends BaseClass {
 		return driver.findElement(By.partialLinkText(moduleName));
 	}
 
-	public void verifyLogin() {
-		if (getLogoutButton().isDisplayed())
-			System.out.println("Login is Successfull");
-		else
-			System.out.println("Login is Failed");
+	public boolean verifyLogin() {
+//		if (getLogoutButton().isDisplayed())
+//			System.out.println("Login is Successfull");
+//		else
+//			System.out.println("Login is Failed");
+		return getLogoutButton().isDisplayed();
 	}
 
-	public void verifyModuleTile(String moduleName) {
-		if (getModuleTile(moduleName).isDisplayed())
-			System.out.println(moduleName + " Module Tile is present");
-		else
-			System.out.println(moduleName + " module Tile is not available");
+	public boolean verifyModuleTile(String moduleName) {
+//		if (getModuleTile(moduleName).isDisplayed())
+//			System.out.println(moduleName + " Module Tile is present");
+//		else
+//			System.out.println(moduleName + " module Tile is not available");
+		
+		return getModuleTile(moduleName).isDisplayed();
 	}
-
+	
 	public void clickModuleTile(String moduleName) {
 		getModuleTile(moduleName).click();
 	}

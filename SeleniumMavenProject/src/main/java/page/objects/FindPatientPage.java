@@ -18,14 +18,6 @@ public class FindPatientPage extends BaseClass {
 	@FindBy(id = "patient-search")
 	WebElement searchField;
 
-	public WebElement getSearchField() {
-		return searchField;
-	}
-
-	public void searchPatientRecord(String patientId) {
-		getSearchField().sendKeys(patientId);
-	}
-
 //	List<WebElement> resultTableHeaders = driver.findElements(By.cssSelector("table#patient-search-results-table>thead>tr>th>div"));	
 	@FindBy(css = "table#patient-search-results-table>thead>tr>th>div")
 	List<WebElement> resultTableHeaders;
@@ -36,9 +28,13 @@ public class FindPatientPage extends BaseClass {
 	public List<WebElement> getResultTableHeaders() {
 		return resultTableHeaders;
 	}
-	
+
 	@FindBy(id = "patient-search-results-table_info")
 	WebElement findPatientRecordsInfo;
+
+	public WebElement getSearchField() {
+		return searchField;
+	}
 
 	public int getResultTableColumnIndex(String columnName) {
 		Map<String, Integer> headersMap = new LinkedHashMap<>();
@@ -51,8 +47,14 @@ public class FindPatientPage extends BaseClass {
 	}
 
 	public WebElement getResultTableColumnElement(String columnName) {
-		return driver.findElement(By.cssSelector("table#patient-search-results-table>tbody>tr>td:nth-of-type("
-				+ getResultTableColumnIndex(columnName) + ")"));
+		try {
+			Thread.sleep(5000);
+			return driver.findElement(By.cssSelector("table#patient-search-results-table>tbody>tr>td:nth-of-type("
+					+ getResultTableColumnIndex(columnName) + ")"));
+		} catch (Exception e) {
+			System.out.println("Exception Occured while fetcing the Result table Column Element:  " + e.getClass());
+		}
+		return null;
 	}
 
 	public String getResultTableColumnValue(String columnName) {
@@ -62,9 +64,18 @@ public class FindPatientPage extends BaseClass {
 	public WebElement getNoMatchingReordsElement() {
 		return noMatchingReordsElement;
 	}
-	
+
 	public WebElement getFindPatientRecordsInfo() {
 		return findPatientRecordsInfo;
+	}
+
+	public void searchPatientRecord(String patientId) {
+		try {
+			getSearchField().sendKeys(patientId);
+			Thread.sleep(5000);
+		} catch (Exception e) {
+			System.out.println("Exception Occured while clicking Attahments Link:  " + e.getClass());
+		}
 	}
 
 	public void verifyResultTableColumnValue(String columnName, String expectedColumnValue) {
@@ -78,16 +89,21 @@ public class FindPatientPage extends BaseClass {
 		}
 	}
 
+	public String verifyResultTableColumnValue(String columnName) {
+		return getResultTableColumnValue(columnName);
+	}
+
 	public void clickResultTableColumnElement(String columnName) {
 		getResultTableColumnElement(columnName).click();
 	}
 
-	public void verifyPatientRecordNotFiltered() {
-		if (getNoMatchingReordsElement().isDisplayed()) {
-			System.out.println("Patient Record deleted successfully");
-		} else {
-			System.out.println("Patient Record is not deleted");
-		}
+	public boolean verifyPatientRecordNotFiltered() {
+//		if (getNoMatchingReordsElement().isDisplayed()) {
+//			System.out.println("Patient Record deleted successfully");
+//		} else {
+//			System.out.println("Patient Record is not deleted");
+//		}		
+		return getNoMatchingReordsElement().isDisplayed();
 	}
 
 }

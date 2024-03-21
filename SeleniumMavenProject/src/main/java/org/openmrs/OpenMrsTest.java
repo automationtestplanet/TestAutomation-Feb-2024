@@ -133,7 +133,6 @@ public class OpenMrsTest {
 		findPatientPage.clickResultTableColumnElement("Identifier");
 		patientDetailsPage.deletePatient("Other");
 		findPatientPage.searchPatientRecord(patientDetailsPage.getPatientIdFromPropertis());
-		Thread.sleep(5000);
 		findPatientPage.verifyPatientRecordNotFiltered();
 
 //		driver.close();

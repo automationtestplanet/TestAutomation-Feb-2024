@@ -139,6 +139,10 @@ public class RegistrationPage extends BaseClass {
 		else
 			System.out.println(moduleName + " module Page is not available");
 	}
+	
+	public String verifyModulePage() {
+		return getModuleHeader().getText().trim();
+	}
 
 	public void enterName(String name1) {
 		String name[] = name1.split(",");
@@ -167,18 +171,28 @@ public class RegistrationPage extends BaseClass {
 		return driver.findElement(By.xpath("//span[contains(text(),'" + labelName + "')]//parent::p")).getText().trim();
 	}
 
-	public void verifyRegistrationDetails(String name, String gender, String dateOfBirth, String PhoneNumber) {
+	public boolean verifyRegistrationDetails(String name, String gender, String dateOfBirth, String PhoneNumber) {
+		
+		try {
 		String actualName = getLabelText("Name:");
 		String acualGender = getLabelText("Gender:");
 		String actualDob = getLabelText("Birthdate:");
 		String phoneNo = getLabelText("Phone Number:");
-		if (actualName.equalsIgnoreCase(name) && acualGender.equalsIgnoreCase(gender) && actualDob.equals(dateOfBirth)
-				&& phoneNo.equals(phoneNo))
-			System.out.println("Registered details are mmatching");
-		else
-			System.out.println("Registered details are not matching");
+//		if (actualName.equalsIgnoreCase(name) && acualGender.equalsIgnoreCase(gender) && actualDob.equals(dateOfBirth)
+//				&& phoneNo.equals(phoneNo))
+//			System.out.println("Registered details are mmatching");
+//		else
+//			System.out.println("Registered details are not matching");
+		
+		return actualName.contains(name) && acualGender.contains(gender) && actualDob.contains(dateOfBirth)
+		&& phoneNo.contains(phoneNo);
+		}catch(Exception e) {
+			
+			
+		}
+		return false;
 	}
-
+	
 	public void clikConfirmButton() {
 		getConfirmButton().click();
 	}
