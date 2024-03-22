@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-22T09:43:48 IST" name="Failed suite [Suite]" finished-at="2024-03-22T09:46:03 IST" duration-ms="134666">
+    <groups>
+      <group name="SanityTest">
+        <method signature="OpenMRSTestNGTest.registerPatientTest()[pri:0, instance:org.openmrs.OpenMRSTestNGTest@4f80542f]" name="registerPatientTest" class="org.openmrs.OpenMRSTestNGTest"/>
+        <method signature="OpenMRSTestNGTest.activeVisitsTest()[pri:0, instance:org.openmrs.OpenMRSTestNGTest@4f80542f]" name="activeVisitsTest" class="org.openmrs.OpenMRSTestNGTest"/>
+      </group> <!-- SanityTest -->
+      <group name="SmokeTest">
+        <method signature="OpenMRSTestNGTest.registerPatientTest()[pri:0, instance:org.openmrs.OpenMRSTestNGTest@4f80542f]" name="registerPatientTest" class="org.openmrs.OpenMRSTestNGTest"/>
+      </group> <!-- SmokeTest -->
+      <group name="RegressionTest">
+        <method signature="OpenMRSTestNGTest.registerPatientTest()[pri:0, instance:org.openmrs.OpenMRSTestNGTest@4f80542f]" name="registerPatientTest" class="org.openmrs.OpenMRSTestNGTest"/>
+        <method signature="OpenMRSTestNGTest.activeVisitsTest()[pri:0, instance:org.openmrs.OpenMRSTestNGTest@4f80542f]" name="activeVisitsTest" class="org.openmrs.OpenMRSTestNGTest"/>
+      </group> <!-- RegressionTest -->
+    </groups>
+    <test started-at="2024-03-22T09:43:48 IST" name="Test(failed)" finished-at="2024-03-22T09:46:03 IST" duration-ms="134666">
+      <class name="org.openmrs.OpenMRSTestNGTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:org.openmrs.OpenMRSTestNGTest@4f80542f]" started-at="2024-03-22T09:43:48 IST" name="beforeSuite" finished-at="2024-03-22T09:43:48 IST" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:org.openmrs.OpenMRSTestNGTest@4f80542f]" started-at="2024-03-22T09:43:48 IST" name="beforeTest" finished-at="2024-03-22T09:43:53 IST" duration-ms="5135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:org.openmrs.OpenMRSTestNGTest@4f80542f]" started-at="2024-03-22T09:43:53 IST" name="beforeClass" finished-at="2024-03-22T09:44:30 IST" duration-ms="37038" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.openmrs.OpenMRSTestNGTest@4f80542f]" started-at="2024-03-22T09:44:30 IST" name="beforeMethod" finished-at="2024-03-22T09:44:34 IST" duration-ms="3438" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Registration Desk]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="registerPatientTest()[pri:0, instance:org.openmrs.OpenMRSTestNGTest@4f80542f]" started-at="2024-03-22T09:44:34 IST" name="registerPatientTest" finished-at="2024-03-22T09:44:52 IST" duration-ms="17782" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerPatientTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:org.openmrs.OpenMRSTestNGTest@4f80542f]" started-at="2024-03-22T09:44:52 IST" name="afterMethod" finished-at="2024-03-22T09:44:59 IST" duration-ms="7301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.openmrs.OpenMRSTestNGTest@4f80542f]" started-at="2024-03-22T09:44:59 IST" name="beforeMethod" finished-at="2024-03-22T09:45:02 IST" duration-ms="2764" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Registration Desk]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="activeVisitsTest()[pri:0, instance:org.openmrs.OpenMRSTestNGTest@4f80542f]" started-at="2024-03-22T09:45:02 IST" name="activeVisitsTest" finished-at="2024-03-22T09:45:54 IST" depends-on-methods="org.openmrs.OpenMRSTestNGTest.registerPatientTest" duration-ms="52210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- activeVisitsTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:org.openmrs.OpenMRSTestNGTest@4f80542f]" started-at="2024-03-22T09:45:54 IST" name="afterMethod" finished-at="2024-03-22T09:46:02 IST" duration-ms="7800" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:org.openmrs.OpenMRSTestNGTest@4f80542f]" started-at="2024-03-22T09:46:02 IST" name="afterTest" finished-at="2024-03-22T09:46:03 IST" duration-ms="1055" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- org.openmrs.OpenMRSTestNGTest -->
+    </test> <!-- Test(failed) -->
+  </suite> <!-- Failed suite [Suite] -->
+</testng-results>

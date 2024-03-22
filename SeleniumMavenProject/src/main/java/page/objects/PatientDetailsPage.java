@@ -161,7 +161,7 @@ public class PatientDetailsPage extends BaseClass {
 		clickStartVisitConfirmButton();
 	}
 
-	public void clickAttachmentsLink() throws Exception {
+	public void clickAttachmentsLink() {
 		try {
 			Thread.sleep(5000);
 			wait.until(ExpectedConditions.elementToBeClickable(getAttachmentsLink()));
