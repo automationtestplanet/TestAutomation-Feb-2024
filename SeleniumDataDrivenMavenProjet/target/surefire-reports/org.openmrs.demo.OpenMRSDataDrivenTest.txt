@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: org.openmrs.demo.OpenMRSDataDrivenTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 5, Errors: 0, Skipped: 3, Time elapsed: 15.699 s <<< FAILURE! - in org.openmrs.demo.OpenMRSDataDrivenTest
+beforeTest(org.openmrs.demo.OpenMRSDataDrivenTest)  Time elapsed: 4.23 s  <<< FAILURE!
+java.lang.IllegalStateException: The driver executable does not exist: E:\TESTING\SELENIUM\AutomationTesting_Feb_2024_new\SeleniumDataDrivenMavenProjetnull
+
+beforeClass(org.openmrs.demo.OpenMRSDataDrivenTest)  Time elapsed: 4.34 s  <<< FAILURE!
+java.lang.NullPointerException
+
+beforeMethod(org.openmrs.demo.OpenMRSDataDrivenTest)  Time elapsed: 4.527 s  <<< FAILURE!
+org.testng.TestNGException: 
+
+Parameter 'UserName' is required by BeforeMethod on method beforeMethod but has not been marked @Optional or defined
+
+
+beforeMethod(org.openmrs.demo.OpenMRSDataDrivenTest)  Time elapsed: 5.041 s  <<< FAILURE!
+org.testng.TestNGException: 
+
+Parameter 'UserName' is required by BeforeMethod on method beforeMethod but has not been marked @Optional or defined
+
+
+afterTest(org.openmrs.demo.OpenMRSDataDrivenTest)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.NullPointerException
+

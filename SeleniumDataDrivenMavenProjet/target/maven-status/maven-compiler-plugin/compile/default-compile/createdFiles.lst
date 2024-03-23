@@ -1,0 +1,8 @@
+openmrs\page\objects\BaseClass.class
+openmrs\page\objects\LoginPage.class
+openmrs\page\objects\Utilities.class
+openmrs\page\objects\RegistrationPage.class
+openmrs\page\objects\PatientDetailsPage.class
+openmrs\page\objects\HomePage.class
+openmrs\page\objects\Utilities$1.class
+openmrs\page\objects\FindPatientPage.class

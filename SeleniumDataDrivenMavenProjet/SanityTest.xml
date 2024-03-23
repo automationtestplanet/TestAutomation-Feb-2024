@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<parameter name="UserName" value="Admin" />
+		<parameter name="Password" value="Admin123" />
+		<parameter name="ModuleName" value="Registration Desk" />
+		<groups>
+			<run>
+				<include name="SanityTest" />
+			</run>
+		</groups>
+		<classes>
+			<class name="org.openmrs.demo.OpenMRSDataDrivenTest" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->
