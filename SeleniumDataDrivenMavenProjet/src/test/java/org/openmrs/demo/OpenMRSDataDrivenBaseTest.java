@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -44,6 +45,7 @@ public class OpenMRSDataDrivenBaseTest {
 	Actions actions;
 	JavascriptExecutor jsExec;
 	Properties testProperties;
+	Utilities utilities;
 
 	@BeforeSuite(alwaysRun = true)
 	public void beforeSuite() {
@@ -73,6 +75,7 @@ public class OpenMRSDataDrivenBaseTest {
 		findPatientPage = new FindPatientPage(driver);
 		actions = new Actions(driver);
 		jsExec = (JavascriptExecutor) driver;
+		utilities = new Utilities(driver);
 	}
 
 	@BeforeClass(alwaysRun = true)
@@ -119,5 +122,4 @@ public class OpenMRSDataDrivenBaseTest {
 				System.getProperty("user.dir") + testProperties.getProperty("test.data.file.path"), "RegisterPatientDetails");
 		return testData.iterator();
 	}
-
 }

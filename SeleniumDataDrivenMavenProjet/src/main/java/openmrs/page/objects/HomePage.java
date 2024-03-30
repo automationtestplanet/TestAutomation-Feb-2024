@@ -12,7 +12,8 @@ public class HomePage extends BaseClass {
 	}
 
 //	WebElement logoutButton = driver.findElement(By.partialLinkText("Logout"));
-	@FindBy(partialLinkText = "Logout")
+//	@FindBy(partialLinkText = "Logout")
+	@FindBy(css = "a[href*='logout']")
 	WebElement logoutButton;
 
 	@FindBy(css = ".icon-home.small")

@@ -6,17 +6,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
+
+import openmrs.page.objects.Utilities;
 
 public class OpenMRSDataDrivenTest extends OpenMRSDataDrivenBaseTest {
 
 	@Test(priority = 0, groups = { "SmokeTest", "SanityTest", "RegressionTest" }, dataProvider = "RegisterPatientData")
 	public void registerPatientTest(String name, String gender, String dateOfBirth, String address, String phneNumber) {
 		assertTrue(homePage.verifyLogin());
+		utilities.captureScreenshot();
+		Reporter.log("<span style=\"color:green\"><strong>Verify Home Page</strong></span>");
+		Reporter.log("<img src=\" "+Utilities.screenshotPath +"\">");
 		System.out.println("---------------------------Register Patient--------------------------------");
 		assertTrue(homePage.verifyModuleTile("Register a patient"), "Verify Register Patient Tile");
 		homePage.clickModuleTile("Register a patient");
 		Assert.assertEquals("Register a patient", registrationPage.verifyModulePage(), "Verify Register Patient Page");
+		utilities.captureScreenshot();
+		Reporter.log("<span style=\"color:green\"><strong>Verify Regiter Patient Page Page</strong></span>");
+		Reporter.log("<img src=\" "+Utilities.screenshotPath +"\">");
 		registrationPage.enterName(name);
 		registrationPage.clikNextButton();
 		registrationPage.selectGender(gender);
@@ -31,9 +40,16 @@ public class OpenMRSDataDrivenTest extends OpenMRSDataDrivenBaseTest {
 		assertTrue(registrationPage.verifyRegistrationDetails(name, gender, dateOfBirth, phneNumber));
 		Assert.assertEquals(true, registrationPage.verifyRegistrationDetails(name, gender, dateOfBirth, phneNumber),
 				"Verify Registration Details");
+		utilities.captureScreenshot();
+		Reporter.log("<span style=\"color:green\"><strong>Verify Registration Details</strong></span>");
+		Reporter.log("<img src=\" "+Utilities.screenshotPath +"\">");
 		registrationPage.clikConfirmButton();
 		assertTrue(patientDetailsPage.verifyRegesteredDetails(name));
 		Assert.assertEquals(true, patientDetailsPage.verifyRegesteredDetails(name), "Verify Registered Details");
+		utilities.captureScreenshot();
+		Reporter.log("<span style=\"color:green\"><strong>Verify Registered Details</strong></span>");
+		Reporter.log("<img src=\" "+Utilities.screenshotPath +"\">");
+		
 		patientDetailsPage.storePatientIdToPropertiesFile();
 		System.out.println(patientDetailsPage.getPatientIdFromPropertis());
 	}

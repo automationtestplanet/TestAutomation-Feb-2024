@@ -11,7 +11,11 @@
 			</run>
 		</groups>
 		<classes>
-			<class name="org.openmrs.demo.OpenMRSDataDrivenTest" />
+			<class name="org.openmrs.demo.OpenMRSDataDrivenTest" >
+				<methods>
+					<include name="registerPatientTest"/>
+				</methods>				
+			</class>
 		</classes>
 	</test> <!--
 	Test -->
