@@ -20,7 +20,6 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 
 import openmrs.page.objects.BaseClass;
 import openmrs.page.objects.FindPatientPage;
@@ -31,7 +30,7 @@ import openmrs.page.objects.RegistrationPage;
 import openmrs.page.objects.Utilities;
 
 public class OpenMRSKeywordDrivenBaseTest {
- 
+
 	public static WebDriver driver;
 	BaseClass baseCls;
 	LoginPage loginPage;
@@ -102,7 +101,7 @@ public class OpenMRSKeywordDrivenBaseTest {
 //		driver.close();
 		driver.quit();
 	}
-	
+
 	@DataProvider(name = "TestDataProvider")
 	public Iterator<Object[]> testDataProvider(Method method) {
 		return Utilities.readKeywordDrivenTestDataFromExcel(

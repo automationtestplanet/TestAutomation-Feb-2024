@@ -3,7 +3,6 @@ package org.openmrs.demo;
 import static org.testng.Assert.assertTrue;
 
 import java.util.Map;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -49,7 +48,8 @@ public class OpenMRSKeywordDrivenTest extends OpenMRSKeywordDrivenBaseTest {
 		Reporter.log("<img src=\" " + Utilities.screenshotPath + "\">");
 		registrationPage.clikConfirmButton();
 		assertTrue(patientDetailsPage.verifyRegesteredDetails(testData.get("Name")));
-		Assert.assertEquals(true, patientDetailsPage.verifyRegesteredDetails(testData.get("Name")), "Verify Registered Details");
+		Assert.assertEquals(true, patientDetailsPage.verifyRegesteredDetails(testData.get("Name")),
+				"Verify Registered Details");
 		utilities.captureScreenshot();
 		Reporter.log("<span style=\"color:green\"><strong>Verify Registered Details</strong></span>");
 		Reporter.log("<img src=\" " + Utilities.screenshotPath + "\">");
