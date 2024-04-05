@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="3" total="6" passed="3" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[<span style="color:green"><strong>Verify Home Page</strong></span>]]>
+    </line>
+    <line>
+      <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073507.jpg">]]>
+    </line>
+    <line>
+      <![CDATA[<span style="color:green"><strong>Verify Regiter Patient Page Page</strong></span>]]>
+    </line>
+    <line>
+      <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073514.jpg">]]>
+    </line>
+    <line>
+      <![CDATA[<span style="color:green"><strong>Verify Registration Details</strong></span>]]>
+    </line>
+    <line>
+      <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073520.jpg">]]>
+    </line>
+    <line>
+      <![CDATA[<span style="color:green"><strong>Verify Registered Details</strong></span>]]>
+    </line>
+    <line>
+      <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073529.jpg">]]>
+    </line>
+    <line>
+      <![CDATA[<span style="color:green"><strong>Verify Home Page</strong></span>]]>
+    </line>
+    <line>
+      <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073541.jpg">]]>
+    </line>
+    <line>
+      <![CDATA[<span style="color:green"><strong>Verify Regiter Patient Page Page</strong></span>]]>
+    </line>
+    <line>
+      <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073544.jpg">]]>
+    </line>
+    <line>
+      <![CDATA[<span style="color:green"><strong>Verify Registration Details</strong></span>]]>
+    </line>
+    <line>
+      <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073549.jpg">]]>
+    </line>
+    <line>
+      <![CDATA[<span style="color:green"><strong>Verify Registered Details</strong></span>]]>
+    </line>
+    <line>
+      <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073554.jpg">]]>
+    </line>
+    <line>
+      <![CDATA[<span style="color:green"><strong>Verify Home Page</strong></span>]]>
+    </line>
+    <line>
+      <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243601073606.jpg">]]>
+    </line>
+    <line>
+      <![CDATA[<span style="color:green"><strong>Verify Regiter Patient Page Page</strong></span>]]>
+    </line>
+    <line>
+      <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243601073610.jpg">]]>
+    </line>
+    <line>
+      <![CDATA[<span style="color:green"><strong>Verify Registration Details</strong></span>]]>
+    </line>
+    <line>
+      <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243601073614.jpg">]]>
+    </line>
+    <line>
+      <![CDATA[<span style="color:green"><strong>Verify Registered Details</strong></span>]]>
+    </line>
+    <line>
+      <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243601073621.jpg">]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2024-04-01T07:34:07 IST" name="Suite" finished-at="2024-04-01T07:36:29 IST" duration-ms="142064">
+    <groups>
+      <group name="SanityTest">
+        <method signature="OpenMRSKeywordDrivenTest.registerPatientTest(java.util.Map)[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" name="registerPatientTest" class="org.openmrs.demo.OpenMRSKeywordDrivenTest"/>
+      </group> <!-- SanityTest -->
+      <group name="SmokeTest">
+        <method signature="OpenMRSKeywordDrivenTest.registerPatientTest(java.util.Map)[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" name="registerPatientTest" class="org.openmrs.demo.OpenMRSKeywordDrivenTest"/>
+      </group> <!-- SmokeTest -->
+      <group name="RegressionTest">
+        <method signature="OpenMRSKeywordDrivenTest.registerPatientTest(java.util.Map)[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" name="registerPatientTest" class="org.openmrs.demo.OpenMRSKeywordDrivenTest"/>
+      </group> <!-- RegressionTest -->
+    </groups>
+    <test started-at="2024-04-01T07:34:07 IST" name="Test" finished-at="2024-04-01T07:36:29 IST" duration-ms="142064">
+      <class name="org.openmrs.demo.OpenMRSKeywordDrivenTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" started-at="2024-04-01T07:34:07 IST" name="beforeSuite" finished-at="2024-04-01T07:34:07 IST" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" started-at="2024-04-01T07:34:07 IST" name="beforeTest" finished-at="2024-04-01T07:34:19 IST" duration-ms="12206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" started-at="2024-04-01T07:34:20 IST" name="beforeClass" finished-at="2024-04-01T07:34:56 IST" duration-ms="36171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" started-at="2024-04-01T07:34:58 IST" name="beforeMethod" finished-at="2024-04-01T07:35:06 IST" duration-ms="8374" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Registration Desk]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="registerPatientTest(java.util.Map)[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" started-at="2024-04-01T07:35:06 IST" name="registerPatientTest" data-provider="TestDataProvider" finished-at="2024-04-01T07:35:30 IST" duration-ms="23089" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Name=Ramesh Babu, H, Gender=Male, PhoneNumber=9876543210, DateOfBirth=26, December, 2000, Address=Near HDFC bank\n S R Nagar,Hyderabad,Telanagana,India,500033}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<span style="color:green"><strong>Verify Home Page</strong></span>]]>
+            </line>
+            <line>
+              <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073507.jpg">]]>
+            </line>
+            <line>
+              <![CDATA[<span style="color:green"><strong>Verify Regiter Patient Page Page</strong></span>]]>
+            </line>
+            <line>
+              <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073514.jpg">]]>
+            </line>
+            <line>
+              <![CDATA[<span style="color:green"><strong>Verify Registration Details</strong></span>]]>
+            </line>
+            <line>
+              <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073520.jpg">]]>
+            </line>
+            <line>
+              <![CDATA[<span style="color:green"><strong>Verify Registered Details</strong></span>]]>
+            </line>
+            <line>
+              <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073529.jpg">]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- registerPatientTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" started-at="2024-04-01T07:35:30 IST" name="afterMethod" finished-at="2024-04-01T07:35:37 IST" duration-ms="7809" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" started-at="2024-04-01T07:35:37 IST" name="beforeMethod" finished-at="2024-04-01T07:35:40 IST" duration-ms="3017" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Registration Desk]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="registerPatientTest(java.util.Map)[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" started-at="2024-04-01T07:35:40 IST" name="registerPatientTest" data-provider="TestDataProvider" finished-at="2024-04-01T07:35:54 IST" duration-ms="13832" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Name=Kishore Kumar, M, Gender=Male, PhoneNumber=9876543211, DateOfBirth=10, November, 1998, Address=Near Icici bank\n HitechCity,Hyderabad,Telanagana,India,500033}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<span style="color:green"><strong>Verify Home Page</strong></span>]]>
+            </line>
+            <line>
+              <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073541.jpg">]]>
+            </line>
+            <line>
+              <![CDATA[<span style="color:green"><strong>Verify Regiter Patient Page Page</strong></span>]]>
+            </line>
+            <line>
+              <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073544.jpg">]]>
+            </line>
+            <line>
+              <![CDATA[<span style="color:green"><strong>Verify Registration Details</strong></span>]]>
+            </line>
+            <line>
+              <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073549.jpg">]]>
+            </line>
+            <line>
+              <![CDATA[<span style="color:green"><strong>Verify Registered Details</strong></span>]]>
+            </line>
+            <line>
+              <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243501073554.jpg">]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- registerPatientTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" started-at="2024-04-01T07:35:54 IST" name="afterMethod" finished-at="2024-04-01T07:36:03 IST" duration-ms="8606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" started-at="2024-04-01T07:36:03 IST" name="beforeMethod" finished-at="2024-04-01T07:36:06 IST" duration-ms="2962" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Registration Desk]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="registerPatientTest(java.util.Map)[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" started-at="2024-04-01T07:36:06 IST" name="registerPatientTest" data-provider="TestDataProvider" finished-at="2024-04-01T07:36:21 IST" duration-ms="14855" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Name=Kumar Raju, Ch, Gender=Male, PhoneNumber=9876543212, DateOfBirth=17, July, 2002, Address=Near SBI bank\n Kukatpally,Hyderabad,Telanagana,India,500033}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<span style="color:green"><strong>Verify Home Page</strong></span>]]>
+            </line>
+            <line>
+              <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243601073606.jpg">]]>
+            </line>
+            <line>
+              <![CDATA[<span style="color:green"><strong>Verify Regiter Patient Page Page</strong></span>]]>
+            </line>
+            <line>
+              <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243601073610.jpg">]]>
+            </line>
+            <line>
+              <![CDATA[<span style="color:green"><strong>Verify Registration Details</strong></span>]]>
+            </line>
+            <line>
+              <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243601073614.jpg">]]>
+            </line>
+            <line>
+              <![CDATA[<span style="color:green"><strong>Verify Registered Details</strong></span>]]>
+            </line>
+            <line>
+              <![CDATA[<img src=" C:\Users\RAJU CHELLE\git\repository\SeleniumKeywordDrivenMavenProject\src\test\resources\screenshots\20243601073621.jpg">]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- registerPatientTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" started-at="2024-04-01T07:36:21 IST" name="afterMethod" finished-at="2024-04-01T07:36:28 IST" duration-ms="7695" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:org.openmrs.demo.OpenMRSKeywordDrivenTest@6bd61f98]" started-at="2024-04-01T07:36:28 IST" name="afterTest" finished-at="2024-04-01T07:36:29 IST" duration-ms="984" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- org.openmrs.demo.OpenMRSKeywordDrivenTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
