@@ -1,0 +1,139 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2024-04-08T02:34:11.171Z",
+        "before": [
+          {
+            "result": {
+              "duration": 45550203000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "org.openmrs.demo.stepdefs.RegisterPatientStepDefs.setUp()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Register Patient with valid data",
+        "description": "",
+        "id": "register-patient-details;register-patient-with-valid-data",
+        "after": [
+          {
+            "result": {
+              "duration": 8117959500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "org.openmrs.demo.stepdefs.RegisterPatientStepDefs.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6107232400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on Register patient page",
+            "match": {
+              "location": "org.openmrs.demo.stepdefs.RegisterPatientStepDefs.user_is_on_Register_patient_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 9464942000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user enters patient name as \"Ramesh Babu, H\" gender as \"Male\" date of birth as \"26, December, 2000\" address as \"Near HDFC bank\\n S R Nagar,Hyderabad,Telanagana,India,500033\" phone number as \"9876543210\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ramesh Babu, H\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Male\"",
+                  "offset": 55
+                },
+                {
+                  "val": "\"26, December, 2000\"",
+                  "offset": 79
+                },
+                {
+                  "val": "\"Near HDFC bank\\n S R Nagar,Hyderabad,Telanagana,India,500033\"",
+                  "offset": 111
+                },
+                {
+                  "val": "\"9876543210\"",
+                  "offset": 190
+                }
+              ],
+              "location": "org.openmrs.demo.stepdefs.RegisterPatientStepDefs.user_enters_patient_name_as_gender_as_date_of_birth_as_address_as_phone_number_as(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 271995400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "clicks confirm button",
+            "match": {
+              "location": "org.openmrs.demo.stepdefs.RegisterPatientStepDefs.clicks_confirm_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7604766700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "patient name \"Ramesh Babu, H\" should be displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ramesh Babu, H\"",
+                  "offset": 13
+                }
+              ],
+              "location": "org.openmrs.demo.stepdefs.RegisterPatientStepDefs.patient_name_should_be_displayed(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 87992300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "patient id must be generated",
+            "match": {
+              "location": "org.openmrs.demo.stepdefs.RegisterPatientStepDefs.patient_id_must_be_generated()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PositiveScenario"
+          }
+        ]
+      }
+    ],
+    "name": "Register Patient Details",
+    "description": "  As a User I want to Register the patient details, so that the patient details can be tracked.",
+    "id": "register-patient-details",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/RegisterPatient.feature",
+    "tags": []
+  }
+]

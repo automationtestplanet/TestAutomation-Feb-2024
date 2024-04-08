@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="79.357">
+    <testcase classname="Register Patient Details" name="Register Patient with valid data" time="77.575">
+        <system-out>
+            <![CDATA[Given user is on Register patient page......................................passed
+When user enters patient name as "Ramesh Babu, H" gender as "Male" date of birth as "26, December, 2000" address as "Near HDFC bank\n S R Nagar,Hyderabad,Telanagana,India,500033" phone number as "9876543210".passed
+And clicks confirm button...................................................passed
+And patient name "Ramesh Babu, H" should be displayed.......................passed
+And patient id must be generated............................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

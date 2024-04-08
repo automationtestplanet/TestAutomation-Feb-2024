@@ -3,7 +3,6 @@ package openmrs.page.objects;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -23,7 +22,13 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import io.cucumber.java.Scenario;
+
+
+
 public class Utilities extends BaseClass {
+	
+	Scenario scenario;
 
 	public Utilities(WebDriver driver) {
 		super(driver);
@@ -51,6 +56,19 @@ public class Utilities extends BaseClass {
 //			screenshotPath = System.getProperty("user.dir") + "\\src\\test\\resources\\screenshots\\screenshot.jpg";
 			File destinaionFile = new File(screenshotPath);
 			FileUtils.copyFile(screenshot, destinaionFile);
+		} catch (Exception e) {
+			System.out.println("Exception Occured while Capturing the screenshot:  " + e.getClass());
+		}
+
+	}
+	
+	@SuppressWarnings("deprecation")
+	public void takeScreenshot() {
+		try {
+			ts = (TakesScreenshot) driver;
+			byte[] sreenByteArr = ts.getScreenshotAs(OutputType.BYTES);
+			scenario.embed(sreenByteArr, "image/jpeg");
+			
 		} catch (Exception e) {
 			System.out.println("Exception Occured while Capturing the screenshot:  " + e.getClass());
 		}

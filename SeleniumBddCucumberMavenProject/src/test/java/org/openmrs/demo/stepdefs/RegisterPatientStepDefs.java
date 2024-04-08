@@ -86,22 +86,23 @@ public class RegisterPatientStepDefs {
 	@Given("user is on Register patient page")
 	public void user_is_on_Register_patient_page() {
 		org.junit.Assert.assertTrue(homePage.verifyLogin());
-		utilities.captureScreenshot();
+		utilities.takeScreenshot();
 		org.junit.Assert.assertTrue(homePage.verifyModuleTile("Register a patient"));
 		homePage.clickModuleTile("Register a patient");
 		org.junit.Assert.assertEquals("Register a patient", registrationPage.verifyModulePage());
-		utilities.captureScreenshot();
+		utilities.takeScreenshot();
 	}
 
 	@When("user enters patient name as {string} gender as {string} date of birth as {string} address as {string} phone number as {string}")
 	public void user_enters_patient_name_as_gender_as_date_of_birth_as_address_as_phone_number_as(String name,
-			String gender, String dateOfBirth, String address, String phneNumber) {
+			String gender, String dateOfBirth, String address, String phneNumber) throws Exception {
 		registrationPage.enterName(name);
 		registrationPage.clikNextButton();
 		registrationPage.selectGender(gender);
 		registrationPage.clikNextButton();
 		registrationPage.setDateOfBorth(dateOfBirth);
 		registrationPage.clikNextButton();
+		Thread.sleep(5000);
 		registrationPage.enterAddress(address);
 		registrationPage.clikNextButton();
 		registrationPage.setPhoneNumber(phneNumber);
@@ -109,7 +110,7 @@ public class RegisterPatientStepDefs {
 		registrationPage.clikNextButton();
 		org.junit.Assert.assertEquals(true,
 				registrationPage.verifyRegistrationDetails(name, gender, dateOfBirth, phneNumber));
-		utilities.captureScreenshot();
+		utilities.takeScreenshot();
 	}
 
 	@When("clicks confirm button")
@@ -120,7 +121,7 @@ public class RegisterPatientStepDefs {
 	@When("patient name {string} should be displayed")
 	public void patient_name_should_be_displayed(String name) {
 		org.junit.Assert.assertTrue(patientDetailsPage.verifyRegesteredDetails(name));
-		utilities.captureScreenshot();
+		utilities.takeScreenshot();
 	}
 
 	@Then("patient id must be generated")
